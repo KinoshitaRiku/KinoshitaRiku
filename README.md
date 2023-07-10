@@ -1,4 +1,4 @@
-更新日：2023/07/10
+更新日：2023/07
 
 # 自己紹介
 
@@ -25,6 +25,6 @@
 | C# | 6ヶ月 |
 | Vue.js | 2ヶ月 |
 
-詳細は、下記URLのスプレッドシートに記載しています。<br>
+詳細は、下記URLのスキルシートに記載しています。<br>
 閲覧いただけましたら幸いです。<br>
 [スキルシート](https://docs.google.com/spreadsheets/d/14zNJGH4to7kJPftlLyrrErXWjc6ZgQO6MhbrHmT-niQ/edit#gid=1596464148)
