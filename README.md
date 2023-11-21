@@ -26,7 +26,7 @@
 | Vue.js | 2ヶ月 |
 
 詳細は、こちらの
-<a href="https://docs.google.com/spreadsheets/d/14zNJGH4to7kJPftlLyrrErXWjc6ZgQO6MhbrHmT-niQ/edit#gid=1596464148" target="_blank">スキルシート</a>
+<a href="https://docs.google.com/spreadsheets/d/14zNJGH4to7kJPftlLyrrErXWjc6ZgQO6MhbrHmT-niQ/edit#gid=1596464148" target="_blank" rel="noopener noreferrer">スキルシート</a>
 に記載しています。<br>
 閲覧いただけましたら幸いです。<br>
 
