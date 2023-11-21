@@ -25,7 +25,9 @@
 | C# | 6ヶ月 |
 | Vue.js | 2ヶ月 |
 
-詳細は、下記URLのスキルシートに記載しています。<br>
+詳細は、こちらの
+<a href="https://docs.google.com/spreadsheets/d/14zNJGH4to7kJPftlLyrrErXWjc6ZgQO6MhbrHmT-niQ/edit#gid=1596464148" target="_blank">スキルシート</a>
+に記載しています。<br>
 閲覧いただけましたら幸いです。<br>
-<a href="https://www.example.com](https://docs.google.com/spreadsheets/d/14zNJGH4to7kJPftlLyrrErXWjc6ZgQO6MhbrHmT-niQ/edit#gid=1596464148" target="_blank">スキルシート</a>
+
 
