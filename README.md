@@ -27,4 +27,5 @@
 
 詳細は、下記URLのスキルシートに記載しています。<br>
 閲覧いただけましたら幸いです。<br>
-[スキルシート](https://docs.google.com/spreadsheets/d/14zNJGH4to7kJPftlLyrrErXWjc6ZgQO6MhbrHmT-niQ/edit#gid=1596464148){:target="_blank"}
+<a href="https://www.example.com](https://docs.google.com/spreadsheets/d/14zNJGH4to7kJPftlLyrrErXWjc6ZgQO6MhbrHmT-niQ/edit#gid=1596464148" target="_blank">スキルシート</a>
+
