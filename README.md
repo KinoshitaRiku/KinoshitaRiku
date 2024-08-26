@@ -15,15 +15,6 @@
 
 # 技術
 現在は、インフラ(AWS)を担当しています。<br>
-エンジニア歴：3年
-
-| 技術 | 歴 |
-| --- | --- |
-| AWS | 2年 |
-| PHP | 0.5年 |
-| Python | 1年 |
-| C# | 0.5月 |
-| Vue.js | 0.5年 |
 
 詳細は、こちらの
 <a href="https://docs.google.com/spreadsheets/d/14zNJGH4to7kJPftlLyrrErXWjc6ZgQO6MhbrHmT-niQ/edit#gid=1596464148" target="_blank" rel="noopener noreferrer">スキルシート</a>
