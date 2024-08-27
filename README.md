@@ -14,7 +14,17 @@
 | MBTI | ISTJ-A(管理者) |
 
 # 技術
-現在は、インフラ(AWS)を担当しています。<br>
+現在は、インフラエンジニアを主にしています。<br>
+
+| カテゴリ | 使用技術(抜粋) |
+| --- | --- |
+| 言語          | Python, TypeScript, HCL... |
+| AWS          | EC2, ECS, S3, RDS... |
+| IaC          | Terraform, SLS, AWS CDK, CloudFormation |
+| 監視・ログ管理 | Datadog, Fluent-bit |
+| セキュリティ   | IAM Policy, SecurityHub, GuardDuty |
+| CI/CD        | GitLab CI, GitHub Actions |
+| データ分析     | BigQuery, Looker Studio |
 
 詳細は、こちらの
 <a href="https://docs.google.com/spreadsheets/d/14zNJGH4to7kJPftlLyrrErXWjc6ZgQO6MhbrHmT-niQ/edit#gid=1596464148" target="_blank" rel="noopener noreferrer">スキルシート</a>
