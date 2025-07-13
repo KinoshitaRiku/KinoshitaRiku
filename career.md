@@ -30,9 +30,11 @@
 ### 技術スタック
 - バックエンド: PHP
 - インフラ: AWS
-- DB: Aurora for Mysql, Mysql, MariaDB
+- DB: Aurora for Mysql, Mysql, MariaDB, Aurora Serverless
 - IaC: CDK (Typescript)
 - ローカル: docker, docker-compose, makefile
+
+### コメント
 
 ### 担当業務_詳細
 
@@ -97,15 +99,19 @@
 
 ### 担当業務_概要
 - 新規や既存のインフラ全般をAWSで要件定義、設計、構築、運用
+- Datadogを用いた監視を設計、構築、運用
 - インフラに関する調査, 調整, 資料作成
+- SRE業務
 
 ### 技術スタック
 - フロントエンド: SPA
 - インフラ: AWS, GCP
-- DB: Aurora for MySQL, MySQL
+- DB: Aurora for MySQL, MySQL, Aurora Serverless
 - IaC: Terraform, SAM, SLS
 - 監視: Datadog
 - その他: GitHub, Docker
+
+### コメント
 
 ### 担当業務_詳細
 
