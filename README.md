@@ -1,16 +1,33 @@
-### Hi there 👋
+更新日: 2025/03
 
-<!--
-**KinoshitaRiku/KinoshitaRiku** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# 自己紹介
 
-Here are some ideas to get you started:
+| 項目 | 内容 |
+| --- | --- |
+| 氏名 | 木下 陸 | 
+| 住所 | 東京都渋谷区 |
+| 出身 | 北海道札幌 |
+| 性別 | 男性 |
+| 年齢 | 27歳(1997年生まれ) |
+| 業務形態 | 個人事業主 |
+| 学歴 | 国立大学法人 室蘭工業大学<br>建築社会基盤系学科 土木コース |
+| 資格 | AWS CLF<br>AWS SAA<br>ITパスポート |
+| MBTI | ISTJ-A(管理者) |
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+# 強み
+
+- AWSインフラの設計・最適化により、コスト削減・運用効率化を実現
+- CI/CD・IaCを活用し、開発スピードと品質を向上
+- 既存システムのAWS移行・技術負債の解消を支援
+- セキュリティ強化・ガバナンス整備により、リスクを最小化
+- 業務DX・自動化により、生産性向上に貢献
+- 全体を俯瞰し、事業成長を支える技術基盤を構築
+
+# 技術
+
+現在は、主にSREおよびインフラエンジニアとして活動しています。<br>
+AWSを中心としたクラウドインフラの要件定義・設計・構築・運用を行い、IaCやCI/CDを活用した効率的なインフラ管理を実践しています。
+
+詳細は以下に記載していますので、ぜひご覧ください。
+- <a href="https://docs.google.com/spreadsheets/d/14zNJGH4to7kJPftlLyrrErXWjc6ZgQO6MhbrHmT-niQ" target="_blank" rel="noopener noreferrer">スキルシート Google スプレッドシート</a>
+- [スキルシート GitHub](career.md)
