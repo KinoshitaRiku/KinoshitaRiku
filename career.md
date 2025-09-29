@@ -50,9 +50,11 @@
 - コミット時にコード品質を自動で確保するためにpre-commitを導入
 - 機密情報の漏洩対策のためにgitleaksを導入
 - 既存リポジトリから機密情報を削除するためにgit-filter-repoを使用
-- GitHub Organizationの加入と脱退をGoogle Apps Scriptで自動化
+- GitHub Organizationの加入と脱退を整備
 - GitHub Actionsの使用量が無料枠を超えないか把握するために、GitHub ActionsからGoogle SpredSheetへの記入と通知を自動化
 - PHP, ComposerのCICDを構築し、デプロイの自動化と作業の短縮
+- Supervisor (プロセスを常駐・監視) の設定
+- GitHubの通知をChatworkからSlackに移行
 
 **AWS**
 - ジャンプアカウント(複数のAWS アカウント管理)を設計、構築
@@ -76,6 +78,8 @@
 - スロークエリをCloudWatch Logs サブスクリプションで検知し、Lambdaで通知する仕組みを構築
 - Incident Managerでオンコールを構築
 - バージョンアップ戦略を設定
+- AWSの通知をChatworkからSlackに移行
+  - システムから大量通知が求められたので、AWS Chatbotを使用せずにLambdaを使用して自前で実装
 
 **Other**
 - 各種インフラの相談役
@@ -89,6 +93,7 @@
 - 各種作業の自動化(shell, CICD)
 - S3からGDriveの大量ファイル移行(rclone)
 - 社内で似たインシデントが発生しているので、ポストモーテムの運用ルールを作成と文化の普及
+- 
 
 ---
 
