@@ -3,17 +3,22 @@
 | カテゴリ | 使用技術 |
 | --- | --- |
 | プログラミング言語 | HTML, CSS, JavaScript, TypeScript, PHP, Python, C#, Java |
-| フレームワーク | Nuxt.js, Vue.js(JavaScript), Laravel(PHP), Django(Python), Flask(Python), .NET Framework(C#) |
+| フレームワーク | Nuxt.js(TypeScript), Vue.js(JavaScript), Laravel(PHP), Django(Python), Flask(Python), .NET Framework(C#) |
 | IaC | Terraform, Terraform Cloud, AWS CDK, AWS CloudFormation, AWS SAM, Serverless Framework |
 | 仮想環境 | Vagrant, WSL2, venv, Docker, Docker Compose, DevContainer |
 | AWS Compute & Network | VPC, EC2, ECS, ELB, Auto Scaling, CloudFront, Route53, Lambda, Batch |
-| AWS Storage & Database | S3, ECR, RDS, DynamoDB |
-| AWS Application Services | SES, SNS, SQS, APIGateway, EventBridge, WAF, ChatBot |
-| AWS Security | IAM, SecurityHub, GuardDuty, Inspector, IAM AccessAnalyzer, AWS Health, WAF |
+| AWS Storage & Database | S3, ECR, RDS, DynamoDB, EFS |
+| AWS Application Services | SES, SNS, SQS, APIGateway, EventBridge, WAF, ChatBot, Step Functions |
+| AWS Security | IAM, SecurityHub, GuardDuty, Inspector, IAM AccessAnalyzer, AWS Health, WAF, KMS, Organizations |
 | AWS Monitoring | CloudWatch, CloudTrail, AWS Config, Incident Manager |
 | AWS DevOps | CodeCommit, CodeBuild, CodeDeploy, CodePipeline |
-| その他サービス | GitLab, GitHub, GCP |
-| 業務ツール | Datadog, Backlog, Slack, サイボウズ, ChatWork, Curosr, Visual Studio, Visual Studio Code, Figma, Subversion, Microsoft Teams, Notion, draw.io |
+| AWS Data & Analytics | Glue, DataSync |
+| AWS Management | Systems Manager (SSM), AWS Budgets, Cost Anomaly Detection |
+| GCP | BigQuery, Data Transfer, Looker Studio |
+| ミドルウェア | Apache, Nginx, Haproxy, postfix, dovecot, Redis, Supervisor, ClamAV, Zabbix |
+| 開発ツール | ESLint, Prettier, pre-commit, gitleaks, git-filter-repo, localstack, rclone, makefile, fluent-bit, Composer |
+| バージョン管理 | GitLab, GitHub, Subversion |
+| 業務ツール | Datadog, Backlog, Slack, サイボウズ, ChatWork, Cursor, Visual Studio, Visual Studio Code, Figma, Microsoft Teams, Notion, draw.io |
 
 # 業務内容
 
@@ -23,18 +28,22 @@
 2024/02 - 現在
 
 ### 担当業務_概要
-- 新規、既存のインフラ全般をAWSで要件定義、設計、構築、運用
-- GitHubの導入と運用
-- SRE業務
+- 複数プロダクトのインフラ全般をAWSで要件定義、設計、構築、運用
+- GitLab→GitHub Enterpriseの全社移行プロジェクトを主導
+- 社内横断的なSRE業務（自動化、セキュリティ強化、コスト最適化、インフラ相談役）
 
 ### 技術スタック
 - バックエンド: PHP
 - インフラ: AWS
-- DB: Aurora for Mysql, Mysql, MariaDB, Aurora Serverless
+- DB: Aurora for Mysql, Mysql, MariaDB, PostgreSQL, Aurora Serverless
 - IaC: CDK (Typescript)
 - ローカル: docker, docker-compose, makefile
 
 ### コメント
+
+GitLab→GitHub Enterpriseへの全社移行プロジェクトを主導し、
+セキュリティ設定や監査対応、運用ルール策定、CI/CD構築まで
+一貫して担当することで、技術実装だけでなく組織横断的なプロジェクトマネジメントの能力も養えました。
 
 ### 担当業務_詳細
 
@@ -42,65 +51,76 @@
 - GitLab CIを構築
 - GitLabからGitHubへの移行
 - GitHub Enterpriseを導入
-- GitHub 権限, ユーザー, リポジトリ, 通知のルール設定と運用
-- GitHub セキュリティや監査ログを設定
-- dependabotの導入
-- dependabot security updateにより、作成されるPRのベースブランチを自動で変更
-- GitHubActions, 複合アクション, 再利用ワークフローを構築
-- コミット時にコード品質を自動で確保するためにpre-commitを導入
-- 機密情報の漏洩対策のためにgitleaksを導入
-- 既存リポジトリから機密情報を削除するためにgit-filter-repoを使用
-- GitHub Organizationの加入と脱退を整備
-- GitHub Actionsの使用量が無料枠を超えないか把握するために、GitHub ActionsからGoogle SpredSheetへの記入と通知を自動化
-- PHP, ComposerのCICDを構築し、デプロイの自動化と作業の短縮
-- Supervisor (プロセスを常駐・監視) の設定
-- GitHubの通知をChatworkからSlackに移行
+- GitHub権限, ユーザー, リポジトリ, 通知のルール設定と運用
+- GitHubセキュリティおよび監査ログを設定
+- Dependabotを導入
+- Dependabot Security UpdateによるPRベースブランチの自動変更
+- GitHub Actions, 複合アクション, 再利用可能ワークフローを構築
+- pre-commitによるコミット時のコード品質自動チェックを導入
+- gitleaksによる機密情報の漏洩対策を導入
+- git-filter-repoで既存リポジトリから機密情報を削除
+- GitHub Organizationの加入, 脱退フローを整備
+- GitHub Actions使用量の監視, 通知を自動化
+- GitHubイベントのChatwork, Slack連携を整備
+- GitHub運用ガイドラインを策定
 
 **AWS**
-- ジャンプアカウント(複数のAWS アカウント管理)を設計、構築
-- IAM UserのIAM Policy, MFAを見直しと設定
-- AWSのコストカットやセキュリティ向上のために、不要なリソースを削除
+- マルチアカウント管理のジャンプアカウントをIAM Roleで設計, 構築
+- IAM UserのPolicy, MFAを見直し
+- 各種OIDC連携を導入
+- 不要なリソース削除によるコストカット, セキュリティ向上
 - メールサーバを改修(EC2, EFS, Route53, postfix, dovecot)
-- EC2間のファイル共有としてEFSを導入
+- EC2の自動リカバリー機能を実装
+- EFSによるEC2間ファイル共有を導入
+- ECSの各種インシデント対応
 - S3ウイルススキャンを導入(ClamAV)
-- GuardDutyでウイルスの感染があるEC2が検出されたので、ClamAVを用いて検査
-- AWSリソース作成時に通知する仕組みを構築
-- RDSエラー時の自動対応を構築
-- EC2, Aurora, Aurora Serverlessのスペック見直し
-- AWSセキュリティ設定, 運用(SecurityHub, GuardDuty等)
-- AWSリージョン制限(SCPが使えないのでIAM Policyで制限)
-- CloudWatchで各種メトリクス監視(EC2, ECS, RDS, Lambda)
-- DataSyncでS3のオブジェクト移行
-- OIDCの導入
-- AWSの初期設定を手動からCDKとGitHubActionsで自動化
-- CentOS7のEC2を延命治療 (yumを使用できるように設定...)
-- EC2へのアクセスで鍵の管理をなくすためにSSHからSSMに変更
-- スロークエリをCloudWatch Logs サブスクリプションで検知し、Lambdaで通知する仕組みを構築
-- Incident Managerでオンコールを構築
-- バージョンアップ戦略を設定
-- AWSの通知をChatworkからSlackに移行
-  - システムから大量通知が求められたので、AWS Chatbotを使用せずにLambdaを使用して自前で実装
+- EventBridge, Step FunctionsによるAWSリソース作成通知を構築
+- MySQLプロセスのタイムアウト対応
+- RDSエラー時の自動リカバリーを構築
+- スロークエリログの調査, 対応
+- スロークエリ管理の仕組みを構築
+- EC2, ECS, Aurora, Aurora Serverlessのスペック最適化
+- AWSセキュリティ設定, 運用, アラート対応(SecurityHub, GuardDuty等)
+- AWS Healthによる障害, バージョンEOL検知
+- IAM PolicyによるAWSリージョン制限(SCPの代替)
+- CloudWatch Alarmによるメトリクス監視(EC2, ECS, RDS, Lambda等)
+- DataSyncによるS3オブジェクト大量移行
+- AWS初期設定のCDK, GitHub Actionsによる自動化
+- Lambdaのパフォーマンスチューニング
+- ECS, RDS, ELB, Lambda監視項目の社内ルール策定と構築
+- Difyセルフホスト基盤を構築(ECS, RDS, S3, Redis等)
+- CentOS7 EC2の延命対応(yum設定等)
+- EC2アクセスをSSHからSSMに移行
+- Incident Managerによるオンコール体制を構築
+- バージョンアップ戦略を策定(MySQL, Lambda, PHP)
+- AWSイベントのChatwork通知基盤を構築
+- AWS通知をChatworkからSlackに移行
+  - SQS, Lambdaによる自前実装(AWS Chatbotの代替)
+- AWS Budgets, Cost Anomaly Detectionによるコスト異常検知, 調査
 
 **Other**
 - 各種インフラの相談役
-- IaCの比較, 導入
-- CDKでAWSを構築
-- ESLintとPretterを導入
-- CDKのデプロイ自動化
-- Dockerfile, docker-composeの導入
-- makefileの導入
-- vscodeの設定を整理
-- 各種作業の自動化(shell, CICD)
-- S3からGDriveの大量ファイル移行(rclone)
-- 社内で似たインシデントが発生しているので、ポストモーテムの運用ルールを作成と文化の普及
-- 
+- IaCツールの比較, 導入(Terraform未使用環境にCDK, CloudFormationを導入)
+- CDKによるAWSインフラ構築
+- ESLint, PrettierによるCDKコード品質管理
+- CDKのCI/CDをGitHub Actionsで構築
+- Dockerfile, docker-composeを導入
+- makefileを導入
+- VS Code設定を整理
+- PHP, Composer, SupervisorのCI/CD構築によるデプロイ自動化
+- PHP ValidateのCI/CD構築と最適化
+- フロントエンド(Node.js)のCI/CDをGitHub Actionsで構築
+- 各種作業の自動化(shell, CI/CD)
+- rcloneによるS3→Google Drive大量ファイル移行
+- ポストモーテムの運用ルール策定と文化醸成
+- Difyのワークフロー構築と環境整備
 
 ---
 
 ## 不動産契約システムのインフラ構築
 
 ### 期間
-2023/01 - 現在
+2023/01 - 2025/09
 
 ### 担当業務_概要
 - 新規や既存のインフラ全般をAWSで要件定義、設計、構築、運用
@@ -117,6 +137,10 @@
 - その他: GitHub, Docker
 
 ### コメント
+
+複数プロダクトのインフラを同時並行で担当することで、様々なインフラパターンへの対応力が養われました。
+複数IaCツール（Terraform, SAM, SLS）の使い分けとDatadog監視基盤の構築を通じて、
+運用性と可観測性を重視したインフラ設計の重要性を学びました。
 
 ### 担当業務_詳細
 
@@ -137,7 +161,7 @@
 - KMS, SSE-S3暗号化の見直し
 - アプリのメンテナンスモードの構築と自動化(EventBridge, Lambda, WebACL)
 - ECSロールバック対応
-- 管理システムを作成(API Gateway, Lambda)
+- 内部管理システムの作成(API Gateway, Lambda)
 - ETLを構築(Glue, stepFunctions)
 - OIDCの導入
 - Organizationのセキュリティ周りを統合
@@ -252,7 +276,9 @@ Linux、ミドルウェアの知識を取得できました。
 - その他: SVN, GitHub
 
 ### コメント
-様々なAWSサービスを扱えて、多くのAWSの知識を積めました。個人事業主として初の案件で、フリーランスとしての様々な経験をさせていただきました。とてもエンジニアとしても社会人としても多くの学びをさせていただきました。
+様々なAWSサービスを扱えて、多くのAWSの知識を積めました。
+個人事業主として初の案件で、フリーランスとしての様々な経験をさせていただきました。
+エンジニアとしても社会人としても多くの学びをさせていただきました。
 
 ### 担当業務_詳細
 - 約400本のLambdaを調査・整理
@@ -286,7 +312,8 @@ Linux、ミドルウェアの知識を取得できました。
 - その他: Nginx, Docker, GitHub, Google Cloud
 
 ### コメント
-Pythonのライブラリや画像処理について知識を得られました。私が業務経験がある取引先の会社なため、お客様の声をダイレクトに聞きながら開発する経験をしました。
+Pythonのライブラリや画像処理について知識を得られました。
+私が業務経験がある取引先の会社なため、お客様の声をダイレクトに聞きながら開発する経験をしました。
 
 ### 担当業務_詳細
 - 相手先の業務効率化に向けたヒアリング、コンサルティング
