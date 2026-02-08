@@ -67,7 +67,6 @@ GitLab→GitHub Enterpriseへの全社移行プロジェクトを主導し、
 ### 担当業務_詳細
 
 **ソースコード管理**
-
 - GitLab CIを構築
 - GitLabからGitHubへの移行
 - GitHub Enterpriseを導入
@@ -85,7 +84,6 @@ GitLab→GitHub Enterpriseへの全社移行プロジェクトを主導し、
 - GitHub運用ガイドラインを策定
 
 **AWS**
-
 - マルチアカウント管理のジャンプアカウントをIAM Roleで設計, 構築
 - IAM UserのPolicy, MFAを見直し
 - 各種OIDC連携を導入
@@ -120,7 +118,6 @@ GitLab→GitHub Enterpriseへの全社移行プロジェクトを主導し、
 - AWS Budgets, Cost Anomaly Detectionによるコスト異常検知, 調査
 
 **Other**
-
 - 各種インフラの相談役
 - IaCツールの比較, 導入(Terraform未使用環境にCDK, CloudFormationを導入)
 - CDKによるAWSインフラ構築
@@ -158,7 +155,7 @@ GitLab→GitHub Enterpriseへの全社移行プロジェクトを主導し、
 
 ### 担当役割
 
-調査
+設計 ~ 運用
 
 ### 業界
 
@@ -187,11 +184,9 @@ GitLab→GitHub Enterpriseへの全社移行プロジェクトを主導し、
 ### 担当業務_詳細
 
 **IaC**
-
 - Terraform, SAM, SLSのIaCでインフラ構築
 
 **AWS**
-
 - AWS各種推奨設定を調査, 検討, 構築
 - フロントエンド(SPA)用のインフラを構築(CloudFront, S3)
 - アプリのセキュリティ強化のためにWAFを構築
@@ -211,12 +206,10 @@ GitLab→GitHub Enterpriseへの全社移行プロジェクトを主導し、
 - Organizationのセキュリティ周りを統合
 
 **GCP**
-
 - BigQuery, DataTransferを構築
 - Looker Studioでデータ分析を表示
 
 **Datadog**
-
 - Intergration、CloudWatchStreamsを設定
 - Logを出力、整理
 - Monitorを設定
@@ -228,7 +221,6 @@ GitLab→GitHub Enterpriseへの全社移行プロジェクトを主導し、
 - terraformでIaC化
 
 **Other**
-
 - Dockerfile, docker-composeの構築
 - リリース作業, 作業手順書を作成
 - 各種インシデント対応
